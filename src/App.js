@@ -1,9 +1,10 @@
 import "./App.css";
+import MovieListPage from "./components/MovieListPage";
 
 function App() {
   return (
     <div className="App">
-      <h3>GSynergy React Web Challenge - A Two Page React Web App</h3>
+      <MovieListPage />
     </div>
   );
 }
