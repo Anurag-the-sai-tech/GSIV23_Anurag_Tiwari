@@ -1,10 +1,22 @@
 import "../styles/MovieListPage.scss";
-import Header from "./Header";
+import MovieCard from "./MovieCards";
 
 function MovieListPage() {
   return (
     <div className="movie-list">
-      <Header />
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+      <MovieCard></MovieCard>
+
     </div>
   );
 }
