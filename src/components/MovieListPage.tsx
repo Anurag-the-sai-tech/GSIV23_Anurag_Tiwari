@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/MovieListPage.scss";
 import MovieCard from "./MovieCards";
+import { getUpcomingMoviesApi } from "../features/api/getUpcomingMoviesApi";
 
 function MovieListPage() {
   return (

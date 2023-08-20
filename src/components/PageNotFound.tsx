@@ -1,4 +1,4 @@
-import React from "react";
+import { getMovieDetailsByIdApi } from "../features/api/getMovieDetailsByIdApi";
 
 function PageNotFound() {
   return (

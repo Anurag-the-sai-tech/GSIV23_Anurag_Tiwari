@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles/MovieDetails.scss";
+import { getMovieDetailsByIdApi } from "../features/api/getMovieDetailsByIdApi";
 
 function MovieDetails() {
   return (
