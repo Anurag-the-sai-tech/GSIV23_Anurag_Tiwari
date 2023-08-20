@@ -7,12 +7,18 @@ import MovieDetails from "./components/MovieDetails";
 import PageNotFound from "./components/PageNotFound";
 
 function App() {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <Header />
+      {location.pathname.startsWith("/details") ? (
+        <Header title="Movie Detials" />
+      ) : (
+        <Header />
+      )}
       <Routes>
         <Route path="/" element={<MovieListPage />}></Route>
-        <Route path="/details" element={<MovieDetails />}></Route>
+        <Route path="/details/:id" element={<MovieDetails />}></Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>

@@ -1,28 +1,37 @@
 import React from "react";
 import "../styles/MovieCard.scss";
+import { Link } from "react-router-dom";
 
-function MovieCards() {
+interface MovieCardProps {
+  id: number;
+  imgUrl: any;
+  title: string;
+  description: string;
+  rating: number;
+}
+
+const MovieCards = (props: MovieCardProps) => {
   return (
-    <div className="movie-card">
+    <Link className="movie-card" to={`/details/${props.id}`}>
       <img
         className="movie-card__img"
-        src="https://d2eib6r9tuf5y8.cloudfront.net/l/assets/img/article/article-1708-joswvwm6/keyvisual.jpg"
+        src={`https://image.tmdb.org/t/p/w200/${props.imgUrl}`}
       ></img>
       <span className="movie-card__details">
         <span className="movie-card__details__title-rating">
           <span className="movie-card__details__title-rating__title">
-            Movie title
+            {props.title}
           </span>
           <span className="movie-card__details__title-rating__rating">
-            (Rating)
+            ⭐ {props.rating}
           </span>
         </span>
         <span className="movie-card__details__description">
-          Description... (2 Lines)
+          {props.description}
         </span>
       </span>
-    </div>
+    </Link>
   );
-}
+};
 
 export default MovieCards;

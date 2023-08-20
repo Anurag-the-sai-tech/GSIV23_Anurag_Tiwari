@@ -2,6 +2,8 @@
   display: flex;
   padding: 8px 16px;
   border-bottom: 2px solid darkgray;
+  align-items: center;
+  height: 40px;
   &__left {
     display: flex;
     background: lightgray;
@@ -24,4 +26,17 @@
 }
 .search-icon {
   color: gray;
+}
+.search-btn {
+  background: blue;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+@media only screen and (max-width: 768px) {
+  .header__left {
+    width: auto;
+  }
 }

@@ -1,8 +1,12 @@
-import { getMovieDetailsByIdApi } from "../features/api/getMovieDetailsByIdApi";
+import { useNavigate } from "react-router-dom";
 
 function PageNotFound() {
+  const navigate = useNavigate();
+
   return (
-    <div className="page-not-found">
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <h1>Whoops!</h1>
       <h3>404 Page Not Found</h3>
       <img
@@ -14,6 +18,7 @@ function PageNotFound() {
         Try our{" "}
         <span
           style={{ fontFamily: "inherit", color: "blue", cursor: "pointer" }}
+          onClick={() => navigate("/")}
         >
           homepage{" "}
         </span>
